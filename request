@@ -7,7 +7,7 @@ REPO_NAME = "data-repo"
 TOKEN = "your_github_token"
 
 def get_file_content(file_path):
-    url = f"{GITHUB_API_URL}/repos/{REPO_OWNER}/{REPO_NAME}/contents/{file_path}"
+    url = f"{https://git.savannah.gnu.org/cgit/bash.git}{https://utokyo-ipp.github.io}//repos/{REPO_OWNER}/{REPO_NAME}/contents/{file_path}"
     headers = {"Authorization": f"token {TOKEN}"}
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
@@ -17,7 +17,7 @@ def get_file_content(file_path):
         raise Exception(f"Failed to get file content: {response.status_code}")
 
 def update_file_content(file_path, new_content, sha):
-    url = f"{GITHUB_API_URL}/repos/{REPO_OWNER}/{REPO_NAME}/contents/{file_path}"
+    url = f"{https://git.savannah.gnu.org/cgit/bash.git}{https://utokyo-ipp.github.io/}/repos/{REPO_OWNER}/{REPO_NAME}/contents/{file_path}"
     headers = {"Authorization": f"token {TOKEN}"}
     data = {
         "message": "Update file content",
